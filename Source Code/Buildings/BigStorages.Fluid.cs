@@ -23,20 +23,8 @@ namespace CoI.Mod.Better.Buildings
         private void FluidStoragesT1(ProtoRegistrator registrator)
         {
             // Set proto ids
-            StaticEntityProto.ID protoID = Ids.Buildings.StorageFluid;
-            StaticEntityProto.ID protoNextTier = Ids.Buildings.StorageFluidT2;
-
-            if (BetterMod.Config.Storage.OverrideVanilla)
-            {
-                // Remove from Database
-                registrator.PrototypesDb.RemoveOrThrow(protoID);
-            }
-            else
-            {
-                protoID = MyIDs.Buildings.StorageFluidT1;
-                protoNextTier = MyIDs.Buildings.StorageFluidT2;
-            }
-
+            StaticEntityProto.ID protoID = MyIDs.Buildings.StorageFluidT1;
+            StaticEntityProto.ID protoNextTier = MyIDs.Buildings.StorageFluidT2;
 
             // Generate LocStr
             string Name = LangManager.Instance.Get("fluid_storage");
@@ -55,30 +43,16 @@ namespace CoI.Mod.Better.Buildings
                 .SetFluidIndicatorGfxParams("Object397/liquid", new FluidIndicatorGfxParams(1f, 1.3f, 2f))
                 .SetAsLockedOnInit();
 
-            if (!BetterMod.Config.Storage.OverrideVanilla) 
-            {
-                creator.SetCustomIconPath(registrator.PrototypesDb.GetOrThrow<StorageProto>(Ids.Buildings.StorageFluid).Graphics.IconPath);
-            }
-
+            creator.SetCustomIconPath(registrator.PrototypesDb.GetOrThrow<StorageProto>(Ids.Buildings.StorageFluid).Graphics.IconPath);
             creator = SetCategory(creator);
             ProductUtility.SetTransferLimitByT(creator, 1).BuildAsFluidAndAdd();
-            Debug.Log("BetterMod(V: " + BetterMod.MyVersion + ") >> BigStorages >> FluidStoragesT1 (override:" + BetterMod.Config.Storage.OverrideVanilla + ") >> created!");
+            Debug.Log("BetterMod(V: " + BetterMod.MyVersion + ") >> BigStorages >> FluidStoragesT1 >> created!");
         }
 
         private void FluidStoragesT2(ProtoRegistrator registrator)
         {
             // Set proto ids
-            StaticEntityProto.ID protoID = Ids.Buildings.StorageFluidT2;
-
-            if (BetterMod.Config.Storage.OverrideVanilla)
-            {
-                // Remove from Database
-                registrator.PrototypesDb.RemoveOrThrow(protoID);
-            }
-            else
-            {
-                protoID = MyIDs.Buildings.StorageFluidT2;
-            }
+            StaticEntityProto.ID protoID = MyIDs.Buildings.StorageFluidT2;
 
             // Generate LocStr
             string Name = LangManager.Instance.Get("fluid_storage");
@@ -94,31 +68,17 @@ namespace CoI.Mod.Better.Buildings
                 .SetPrefabPath("Assets/Base/Buildings/Storages/GasT2.prefab")
                 .SetFluidIndicatorGfxParams("Object395/liquid001", new FluidIndicatorGfxParams(1f, 1.3f, 2f));
 
-            if (!BetterMod.Config.Storage.OverrideVanilla)
-            {
-                creator.SetCustomIconPath(registrator.PrototypesDb.GetOrThrow<StorageProto>(Ids.Buildings.StorageFluidT2).Graphics.IconPath);
-            }
+            creator.SetCustomIconPath(registrator.PrototypesDb.GetOrThrow<StorageProto>(Ids.Buildings.StorageFluidT2).Graphics.IconPath);
             creator = SetCategory(creator);
             ProductUtility.SetTransferLimitByT(creator, 2).BuildAsFluidAndAdd();
-            Debug.Log("BetterMod(V: " + BetterMod.MyVersion + ") >> BigStorages >> FluidStoragesT2 (override:" + BetterMod.Config.Storage.OverrideVanilla + ") >> created!");
+            Debug.Log("BetterMod(V: " + BetterMod.MyVersion + ") >> BigStorages >> FluidStoragesT2 >> created!");
         }
 
         private void FluidStoragesT3(ProtoRegistrator registrator)
         {
             // Set proto ids
-            StaticEntityProto.ID protoID = Ids.Buildings.StorageFluidT3;
-            StaticEntityProto.ID protoNextTier = Ids.Buildings.StorageFluidT4;
-
-            if (BetterMod.Config.Storage.OverrideVanilla)
-            {
-                // Remove from Database
-                registrator.PrototypesDb.RemoveOrThrow(protoID);
-            }
-            else
-            {
-                protoID = MyIDs.Buildings.StorageFluidT3;
-                protoNextTier = MyIDs.Buildings.StorageFluidT4;
-            }
+            StaticEntityProto.ID protoID = MyIDs.Buildings.StorageFluidT3;
+            StaticEntityProto.ID protoNextTier = MyIDs.Buildings.StorageFluidT4;
 
             // Generate LocStr
             string Name = LangManager.Instance.Get("fluid_storage");
@@ -135,29 +95,16 @@ namespace CoI.Mod.Better.Buildings
                 .SetPrefabPath("Assets/Base/Buildings/Storages/GasT3.prefab")
                 .SetFluidIndicatorGfxParams("gas_1010_T1_seg2/liquid", new FluidIndicatorGfxParams(1f, 2.6f, 2f));
 
-            if (!BetterMod.Config.Storage.OverrideVanilla)
-            {
-                creator.SetCustomIconPath(registrator.PrototypesDb.GetOrThrow<StorageProto>(Ids.Buildings.StorageFluidT3).Graphics.IconPath);
-            }
+            creator.SetCustomIconPath(registrator.PrototypesDb.GetOrThrow<StorageProto>(Ids.Buildings.StorageFluidT3).Graphics.IconPath);
             creator = SetCategory(creator);
             ProductUtility.SetTransferLimitByT(creator, 3).BuildAsFluidAndAdd();
-            Debug.Log("BetterMod(V: " + BetterMod.MyVersion + ") >> BigStorages >> FluidStoragesT3 (override:" + BetterMod.Config.Storage.OverrideVanilla + ") >> created!");
+            Debug.Log("BetterMod(V: " + BetterMod.MyVersion + ") >> BigStorages >> FluidStoragesT3 >> created!");
         }
 
         private void FluidStoragesT4(ProtoRegistrator registrator)
         {
             // Set proto ids
-            StaticEntityProto.ID protoID = Ids.Buildings.StorageFluidT4;
-
-            if (BetterMod.Config.Storage.OverrideVanilla)
-            {
-                // Remove from Database
-                registrator.PrototypesDb.RemoveOrThrow(protoID);
-            }
-            else
-            {
-                protoID = MyIDs.Buildings.StorageFluidT4;
-            }
+            StaticEntityProto.ID protoID = MyIDs.Buildings.StorageFluidT4;
 
             // Generate LocStr
             string Name = LangManager.Instance.Get("fluid_storage");
@@ -173,13 +120,10 @@ namespace CoI.Mod.Better.Buildings
                 .SetPrefabPath("Assets/Base/Buildings/Storages/GasT4.prefab")
                 .SetFluidIndicatorGfxParams("gas_1010_T2_seg3/liquid", new FluidIndicatorGfxParams(1f, 2.6f, 2f));
 
-            if (!BetterMod.Config.Storage.OverrideVanilla)
-            {
-                creator.SetCustomIconPath(registrator.PrototypesDb.GetOrThrow<StorageProto>(Ids.Buildings.StorageFluidT4).Graphics.IconPath);
-            }
+            creator.SetCustomIconPath(registrator.PrototypesDb.GetOrThrow<StorageProto>(Ids.Buildings.StorageFluidT4).Graphics.IconPath);
             creator = SetCategory(creator);
             ProductUtility.SetTransferLimitByT(creator, 4).BuildAsFluidAndAdd();
-            Debug.Log("BetterMod(V: " + BetterMod.MyVersion + ") >> BigStorages >> FluidStoragesT4 (override:" + BetterMod.Config.Storage.OverrideVanilla + ") >> created!");
+            Debug.Log("BetterMod(V: " + BetterMod.MyVersion + ") >> BigStorages >> FluidStoragesT4 >> created!");
         }
 
         #endregion

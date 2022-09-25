@@ -16,75 +16,75 @@ namespace CoI.Mod.Better.MyIDs
 
     public sealed class Research
     {
-        public readonly static ResearchNodeProto.ID GenerellEdictsResearchT1 = new ResearchNodeProto.ID("MyGenerellEdictsResearchT1");
-        public readonly static ResearchNodeProto.ID GenerellEdictsResearchT2 = new ResearchNodeProto.ID("MyGenerellEdictsResearchT2");
-        public readonly static ResearchNodeProto.ID GenerellEdictsResearchT3 = new ResearchNodeProto.ID("MyGenerellEdictsResearchT3");
-        public readonly static ResearchNodeProto.ID GenerellEdictsResearchT4 = new ResearchNodeProto.ID("MyGenerellEdictsResearchT4");
-        public readonly static ResearchNodeProto.ID GenerellEdictsResearchT5 = new ResearchNodeProto.ID("MyGenerellEdictsResearchT5");
+        public readonly static ResearchNodeProto.ID GenerellEdictsResearchT1 = Ids.Research.CreateId("MyGenerellEdictsResearchT1");
+        public readonly static ResearchNodeProto.ID GenerellEdictsResearchT2 = Ids.Research.CreateId("MyGenerellEdictsResearchT2");
+        public readonly static ResearchNodeProto.ID GenerellEdictsResearchT3 = Ids.Research.CreateId("MyGenerellEdictsResearchT3");
+        public readonly static ResearchNodeProto.ID GenerellEdictsResearchT4 = Ids.Research.CreateId("MyGenerellEdictsResearchT4");
+        public readonly static ResearchNodeProto.ID GenerellEdictsResearchT5 = Ids.Research.CreateId("MyGenerellEdictsResearchT5");
 
-        public readonly static ResearchNodeProto.ID GenerellEdictsResearchCheat_T1 = new ResearchNodeProto.ID("MyGenerellEdictsResearchCheat");
-        public readonly static ResearchNodeProto.ID GenerellEdictsResearchCheat_T2 = new ResearchNodeProto.ID("MyGenerellEdictsResearchCheatT2");
-        public readonly static ResearchNodeProto.ID GenerellEdictsResearchCheat_T3 = new ResearchNodeProto.ID("MyGenerellEdictsResearchCheatT3");
-        public readonly static ResearchNodeProto.ID GenerellEdictsResearchCheat_T4 = new ResearchNodeProto.ID("MyGenerellEdictsResearchCheatT4");
-        public readonly static ResearchNodeProto.ID GenerellEdictsResearchCheat_T5 = new ResearchNodeProto.ID("MyGenerellEdictsResearchCheatT5");
+        public readonly static ResearchNodeProto.ID GenerellEdictsResearchCheat_T1 = Ids.Research.CreateId("MyGenerellEdictsResearchCheat");
+        public readonly static ResearchNodeProto.ID GenerellEdictsResearchCheat_T2 = Ids.Research.CreateId("MyGenerellEdictsResearchCheatT2");
+        public readonly static ResearchNodeProto.ID GenerellEdictsResearchCheat_T3 = Ids.Research.CreateId("MyGenerellEdictsResearchCheatT3");
+        public readonly static ResearchNodeProto.ID GenerellEdictsResearchCheat_T4 = Ids.Research.CreateId("MyGenerellEdictsResearchCheatT4");
+        public readonly static ResearchNodeProto.ID GenerellEdictsResearchCheat_T5 = Ids.Research.CreateId("MyGenerellEdictsResearchCheatT5");
 
-        public readonly static ResearchNodeProto.ID VehicleEdictsResearchT1 = new ResearchNodeProto.ID("MyEdictsResearchT1");
-        public readonly static ResearchNodeProto.ID VehicleEdictsResearchT2 = new ResearchNodeProto.ID("MyEdictsResearchT2");
-        public readonly static ResearchNodeProto.ID VehicleEdictsResearchT3 = new ResearchNodeProto.ID("MyEdictsResearchT3");
-        public readonly static ResearchNodeProto.ID VehicleEdictsResearchT4 = new ResearchNodeProto.ID("MyEdictsResearchT4");
-        public readonly static ResearchNodeProto.ID VehicleEdictsResearchT5 = new ResearchNodeProto.ID("MyEdictsResearchT5");
+        public readonly static ResearchNodeProto.ID VehicleEdictsResearchT1 = Ids.Research.CreateId("MyEdictsResearchT1");
+        public readonly static ResearchNodeProto.ID VehicleEdictsResearchT2 = Ids.Research.CreateId("MyEdictsResearchT2");
+        public readonly static ResearchNodeProto.ID VehicleEdictsResearchT3 = Ids.Research.CreateId("MyEdictsResearchT3");
+        public readonly static ResearchNodeProto.ID VehicleEdictsResearchT4 = Ids.Research.CreateId("MyEdictsResearchT4");
+        public readonly static ResearchNodeProto.ID VehicleEdictsResearchT5 = Ids.Research.CreateId("MyEdictsResearchT5");
 
-        public readonly static ResearchNodeProto.ID VehicleEdictsResearchCheat_T1 = new ResearchNodeProto.ID("MyEdictsResearchCheat");
-        public readonly static ResearchNodeProto.ID VehicleEdictsResearchCheat_T2 = new ResearchNodeProto.ID("MyEdictsResearchCheatT2");
-        public readonly static ResearchNodeProto.ID VehicleEdictsResearchCheat_T3 = new ResearchNodeProto.ID("MyEdictsResearchCheatT3");
-        public readonly static ResearchNodeProto.ID VehicleEdictsResearchCheat_T4 = new ResearchNodeProto.ID("MyEdictsResearchCheatT4");
-        public readonly static ResearchNodeProto.ID VehicleEdictsResearchCheat_T5 = new ResearchNodeProto.ID("MyEdictsResearchCheatT5");
+        public readonly static ResearchNodeProto.ID VehicleEdictsResearchCheat_T1 = Ids.Research.CreateId("MyEdictsResearchCheat");
+        public readonly static ResearchNodeProto.ID VehicleEdictsResearchCheat_T2 = Ids.Research.CreateId("MyEdictsResearchCheatT2");
+        public readonly static ResearchNodeProto.ID VehicleEdictsResearchCheat_T3 = Ids.Research.CreateId("MyEdictsResearchCheatT3");
+        public readonly static ResearchNodeProto.ID VehicleEdictsResearchCheat_T4 = Ids.Research.CreateId("MyEdictsResearchCheatT4");
+        public readonly static ResearchNodeProto.ID VehicleEdictsResearchCheat_T5 = Ids.Research.CreateId("MyEdictsResearchCheatT5");
 
-        public readonly static ResearchNodeProto.ID VehicleCapIncreaseID_ZERO = new ResearchNodeProto.ID("MyVehicle_Cap_Increase_ZERO");
-        public readonly static ResearchNodeProto.ID VehicleCapIncreaseID_CHEAT = new ResearchNodeProto.ID("CHEAT_Vehicle_Cap_Increase_CHEAT");
-        public readonly static ResearchNodeProto.ID VehicleCapIncreaseID_I = new ResearchNodeProto.ID("MyVehicle_Cap_Increase_I");
-        public readonly static ResearchNodeProto.ID VehicleCapIncreaseID_II = new ResearchNodeProto.ID("MyVehicle_Cap_Increase_II");
-        public readonly static ResearchNodeProto.ID VehicleCapIncreaseID_III = new ResearchNodeProto.ID("MyVehicle_Cap_Increase_III");
-        public readonly static ResearchNodeProto.ID VehicleCapIncreaseID_IV = new ResearchNodeProto.ID("MyVehicle_Cap_Increase_IV");
-        public readonly static ResearchNodeProto.ID VehicleCapIncreaseID_V = new ResearchNodeProto.ID("MyVehicle_Cap_Increase_V");
-        public readonly static ResearchNodeProto.ID VehicleCapIncreaseID_VI = new ResearchNodeProto.ID("MyVehicle_Cap_Increase_VI");
-        public readonly static ResearchNodeProto.ID VehicleCapIncreaseID_VII = new ResearchNodeProto.ID("MyVehicle_Cap_Increase_VII");
-        public readonly static ResearchNodeProto.ID VehicleCapIncreaseID_VIII = new ResearchNodeProto.ID("MyVehicle_Cap_Increase_VIII");
-        public readonly static ResearchNodeProto.ID VehicleCapIncreaseID_IX = new ResearchNodeProto.ID("MyVehicle_Cap_Increase_IX");
-        public readonly static ResearchNodeProto.ID VehicleCapIncreaseID_X = new ResearchNodeProto.ID("MyVehicle_Cap_Increase_X");
-        public readonly static ResearchNodeProto.ID VehicleCapIncreaseID_XI = new ResearchNodeProto.ID("MyVehicle_Cap_Increase_XI");
-        public readonly static ResearchNodeProto.ID VehicleCapIncreaseID_XII = new ResearchNodeProto.ID("MyVehicle_Cap_Increase_XII");
-        public readonly static ResearchNodeProto.ID VehicleCapIncreaseID_XIII = new ResearchNodeProto.ID("MyVehicle_Cap_Increase_XIII");
-        public readonly static ResearchNodeProto.ID VehicleCapIncreaseID_XIV = new ResearchNodeProto.ID("MyVehicle_Cap_Increase_XIV");
-        public readonly static ResearchNodeProto.ID VehicleCapIncreaseID_XV = new ResearchNodeProto.ID("MyVehicle_Cap_Increase_XV");
+        public readonly static ResearchNodeProto.ID VehicleCapIncreaseID_ZERO = Ids.Research.CreateId("MyVehicle_Cap_Increase_ZERO");
+        public readonly static ResearchNodeProto.ID VehicleCapIncreaseID_CHEAT = Ids.Research.CreateId("CHEAT_Vehicle_Cap_Increase_CHEAT");
+        public readonly static ResearchNodeProto.ID VehicleCapIncreaseID_I = Ids.Research.CreateId("MyVehicle_Cap_Increase_I");
+        public readonly static ResearchNodeProto.ID VehicleCapIncreaseID_II = Ids.Research.CreateId("MyVehicle_Cap_Increase_II");
+        public readonly static ResearchNodeProto.ID VehicleCapIncreaseID_III = Ids.Research.CreateId("MyVehicle_Cap_Increase_III");
+        public readonly static ResearchNodeProto.ID VehicleCapIncreaseID_IV = Ids.Research.CreateId("MyVehicle_Cap_Increase_IV");
+        public readonly static ResearchNodeProto.ID VehicleCapIncreaseID_V = Ids.Research.CreateId("MyVehicle_Cap_Increase_V");
+        public readonly static ResearchNodeProto.ID VehicleCapIncreaseID_VI = Ids.Research.CreateId("MyVehicle_Cap_Increase_VI");
+        public readonly static ResearchNodeProto.ID VehicleCapIncreaseID_VII = Ids.Research.CreateId("MyVehicle_Cap_Increase_VII");
+        public readonly static ResearchNodeProto.ID VehicleCapIncreaseID_VIII = Ids.Research.CreateId("MyVehicle_Cap_Increase_VIII");
+        public readonly static ResearchNodeProto.ID VehicleCapIncreaseID_IX = Ids.Research.CreateId("MyVehicle_Cap_Increase_IX");
+        public readonly static ResearchNodeProto.ID VehicleCapIncreaseID_X = Ids.Research.CreateId("MyVehicle_Cap_Increase_X");
+        public readonly static ResearchNodeProto.ID VehicleCapIncreaseID_XI = Ids.Research.CreateId("MyVehicle_Cap_Increase_XI");
+        public readonly static ResearchNodeProto.ID VehicleCapIncreaseID_XII = Ids.Research.CreateId("MyVehicle_Cap_Increase_XII");
+        public readonly static ResearchNodeProto.ID VehicleCapIncreaseID_XIII = Ids.Research.CreateId("MyVehicle_Cap_Increase_XIII");
+        public readonly static ResearchNodeProto.ID VehicleCapIncreaseID_XIV = Ids.Research.CreateId("MyVehicle_Cap_Increase_XIV");
+        public readonly static ResearchNodeProto.ID VehicleCapIncreaseID_XV = Ids.Research.CreateId("MyVehicle_Cap_Increase_XV");
 
-        public readonly static ResearchNodeProto.ID VoidCrusher = new ResearchNodeProto.ID("ResearchVoidCrusher");
-        public readonly static ResearchNodeProto.ID VoidCrusherCheat = new ResearchNodeProto.ID("ResearchVoidCrusherCheat");
-        public readonly static ResearchNodeProto.ID VoidCrusherRecyclablesCheat = new ResearchNodeProto.ID("ResearchVoidCrusherRecyclablesCheat");
-        public readonly static ResearchNodeProto.ID VoidCrusherFluidCheat = new ResearchNodeProto.ID("ResearchVoidCrusherFluidCheat");
-        public readonly static ResearchNodeProto.ID VoidCrusherLooseCheat = new ResearchNodeProto.ID("ResearchVoidCrusherLooseCheat");
-        public readonly static ResearchNodeProto.ID VoidProducerCheat = new ResearchNodeProto.ID("ResearchVoidProducerCheat");
-        public readonly static ResearchNodeProto.ID VoidDieselEnergyCheat = new ResearchNodeProto.ID("VoidEnergyCheat");
-        public readonly static ResearchNodeProto.ID VoidPowerEnergyCheat = new ResearchNodeProto.ID("VoidPowerEnergyCheat");
+        public readonly static ResearchNodeProto.ID VoidCrusher = Ids.Research.CreateId("ResearchVoidCrusher");
+        public readonly static ResearchNodeProto.ID VoidCrusherCheat = Ids.Research.CreateId("ResearchVoidCrusherCheat");
+        public readonly static ResearchNodeProto.ID VoidCrusherRecyclablesCheat = Ids.Research.CreateId("ResearchVoidCrusherRecyclablesCheat");
+        public readonly static ResearchNodeProto.ID VoidCrusherFluidCheat = Ids.Research.CreateId("ResearchVoidCrusherFluidCheat");
+        public readonly static ResearchNodeProto.ID VoidCrusherLooseCheat = Ids.Research.CreateId("ResearchVoidCrusherLooseCheat");
+        public readonly static ResearchNodeProto.ID VoidProducerCheat = Ids.Research.CreateId("ResearchVoidProducerCheat");
+        public readonly static ResearchNodeProto.ID VoidDieselEnergyCheat = Ids.Research.CreateId("VoidEnergyCheat");
+        public readonly static ResearchNodeProto.ID VoidPowerEnergyCheat = Ids.Research.CreateId("VoidPowerEnergyCheat");
 
-        public readonly static ResearchNodeProto.ID StorageResearchT1 = new ResearchNodeProto.ID("MyStorageResearchT1");
-        public readonly static ResearchNodeProto.ID StorageResearchT2 = new ResearchNodeProto.ID("MyStorageResearchT2");
-        public readonly static ResearchNodeProto.ID StorageResearchT3 = new ResearchNodeProto.ID("MyStorageResearchT3");
-        public readonly static ResearchNodeProto.ID StorageResearchT4 = new ResearchNodeProto.ID("MyStorageResearchT4");
-        public readonly static ResearchNodeProto.ID StorageResearchT5 = new ResearchNodeProto.ID("MyStorageResearchT5");
+        public readonly static ResearchNodeProto.ID StorageResearchT1 = Ids.Research.CreateId("MyStorageResearchT1");
+        public readonly static ResearchNodeProto.ID StorageResearchT2 = Ids.Research.CreateId("MyStorageResearchT2");
+        public readonly static ResearchNodeProto.ID StorageResearchT3 = Ids.Research.CreateId("MyStorageResearchT3");
+        public readonly static ResearchNodeProto.ID StorageResearchT4 = Ids.Research.CreateId("MyStorageResearchT4");
+        public readonly static ResearchNodeProto.ID StorageResearchT5 = Ids.Research.CreateId("MyStorageResearchT5");
 
-        public readonly static ResearchNodeProto.ID SteamStorageResearchT1 = new ResearchNodeProto.ID("MySteamStorageResearchT1");
-        public readonly static ResearchNodeProto.ID SteamStorageResearchT2 = new ResearchNodeProto.ID("MySteamStorageResearchT2");
-        public readonly static ResearchNodeProto.ID SteamStorageResearchT3 = new ResearchNodeProto.ID("MySteamStorageResearchT3");
-        public readonly static ResearchNodeProto.ID SteamStorageResearchT4 = new ResearchNodeProto.ID("MySteamStorageResearchT4");
+        public readonly static ResearchNodeProto.ID SteamStorageResearchT1 = Ids.Research.CreateId("MySteamStorageResearchT1");
+        public readonly static ResearchNodeProto.ID SteamStorageResearchT2 = Ids.Research.CreateId("MySteamStorageResearchT2");
+        public readonly static ResearchNodeProto.ID SteamStorageResearchT3 = Ids.Research.CreateId("MySteamStorageResearchT3");
+        public readonly static ResearchNodeProto.ID SteamStorageResearchT4 = Ids.Research.CreateId("MySteamStorageResearchT4");
 
     }
 
     public static class ToolbarCategories
     {
-        public static readonly Proto.ID Storages = new Proto.ID("Better_Mod_Storages");
-        public static readonly Proto.ID MachinesElectricity = new Proto.ID("Better_Mod_Electricity");
-        public static readonly Proto.ID MachinesMetallurgy = new Proto.ID("Better_Mod_Metallurgy");
+        public static readonly Proto.ID Storages = Ids.ToolbarCategories.Storages;
+        public static readonly Proto.ID MachinesElectricity = Ids.ToolbarCategories.MachinesElectricity;
+        public static readonly Proto.ID MachinesMetallurgy = Ids.ToolbarCategories.MachinesMetallurgy;
     }
 
     public sealed class Buildings
@@ -118,14 +118,14 @@ namespace CoI.Mod.Better.MyIDs
 
     public sealed class Machines
     {
-        public readonly static MachineProto.ID VoidCrusher = new MachineProto.ID("VoidCrusher");
-        public readonly static MachineProto.ID VoidCrusherCheat = new MachineProto.ID("VoidCrusherCheat");
-        public readonly static MachineProto.ID VoidCrusherLooseCheat = new MachineProto.ID("VoidCrusherLooseCheat");
-        public readonly static MachineProto.ID VoidCrusherFluidCheat = new MachineProto.ID("VoidCrusherFluidCheat");
-        public readonly static MachineProto.ID VoidCrusherRecyclablesCheat = new MachineProto.ID("VoidCrusherRecyclablesCheat");
-        public readonly static MachineProto.ID VoidProducerFluidCheat = new MachineProto.ID("VoidProducerLiquidCheat");
-        public readonly static MachineProto.ID VoidProducerLooseCheat = new MachineProto.ID("VoidProducerLooseCheat");
-        public readonly static MachineProto.ID VoidProducerProductCheat = new MachineProto.ID("VoidProducerProductCheat");
+        public readonly static MachineProto.ID VoidCrusher = Ids.Machines.CreateId("VoidCrusher");
+        public readonly static MachineProto.ID VoidCrusherCheat = Ids.Machines.CreateId("VoidCrusherCheat");
+        public readonly static MachineProto.ID VoidCrusherLooseCheat = Ids.Machines.CreateId("VoidCrusherLooseCheat");
+        public readonly static MachineProto.ID VoidCrusherFluidCheat = Ids.Machines.CreateId("VoidCrusherFluidCheat");
+        public readonly static MachineProto.ID VoidCrusherRecyclablesCheat = Ids.Machines.CreateId("VoidCrusherRecyclablesCheat");
+        public readonly static MachineProto.ID VoidProducerFluidCheat = Ids.Machines.CreateId("VoidProducerLiquidCheat");
+        public readonly static MachineProto.ID VoidProducerLooseCheat = Ids.Machines.CreateId("VoidProducerLooseCheat");
+        public readonly static MachineProto.ID VoidProducerProductCheat = Ids.Machines.CreateId("VoidProducerProductCheat");
 
 
         public readonly static StaticEntityProto.ID VoidDieselEnergy10Cheat = new StaticEntityProto.ID("VoidProducerEnergy10Cheat");
@@ -149,40 +149,40 @@ namespace CoI.Mod.Better.MyIDs
 
         public sealed class Trucks
         {
-            public readonly static ResearchNodeProto.ID CapacityIncT1 = new ResearchNodeProto.ID(Utilities.CapacityIncStr + "2");
-            public readonly static ResearchNodeProto.ID CapacityIncT2 = new ResearchNodeProto.ID(Utilities.CapacityIncStr + "3");
-            public readonly static ResearchNodeProto.ID CapacityIncT3 = new ResearchNodeProto.ID(Utilities.CapacityIncStr + "4");
-            public readonly static ResearchNodeProto.ID CapacityIncT4 = new ResearchNodeProto.ID(Utilities.CapacityIncStr + "5");
+            public readonly static ResearchNodeProto.ID CapacityIncT1 = Ids.Research.CreateId(Utilities.CapacityIncStr + "2");
+            public readonly static ResearchNodeProto.ID CapacityIncT2 = Ids.Research.CreateId(Utilities.CapacityIncStr + "3");
+            public readonly static ResearchNodeProto.ID CapacityIncT3 = Ids.Research.CreateId(Utilities.CapacityIncStr + "4");
+            public readonly static ResearchNodeProto.ID CapacityIncT4 = Ids.Research.CreateId(Utilities.CapacityIncStr + "5");
 
-            public readonly static ResearchNodeProto.ID CapacityIncT1_CHEAT = new ResearchNodeProto.ID(Utilities.CapacityIncStr + Utilities.Cheat_1);
-            public readonly static ResearchNodeProto.ID CapacityIncT2_CHEAT = new ResearchNodeProto.ID(Utilities.CapacityIncStr + Utilities.Cheat_2);
-            public readonly static ResearchNodeProto.ID CapacityIncT3_CHEAT = new ResearchNodeProto.ID(Utilities.CapacityIncStr + Utilities.Cheat_3);
-            public readonly static ResearchNodeProto.ID CapacityIncT4_CHEAT = new ResearchNodeProto.ID(Utilities.CapacityIncStr + Utilities.Cheat_4);
-            public readonly static ResearchNodeProto.ID CapacityIncT5_CHEAT = new ResearchNodeProto.ID(Utilities.CapacityIncStr + Utilities.Cheat_5);
-
-
-
-            public readonly static ResearchNodeProto.ID FuelReductionT1 = new ResearchNodeProto.ID(Utilities.FuelReductionStr + "2");
-            public readonly static ResearchNodeProto.ID FuelReductionT2 = new ResearchNodeProto.ID(Utilities.FuelReductionStr + "3");
-            public readonly static ResearchNodeProto.ID FuelReductionT3 = new ResearchNodeProto.ID(Utilities.FuelReductionStr + "4");
-            public readonly static ResearchNodeProto.ID FuelReductionT4 = new ResearchNodeProto.ID(Utilities.FuelReductionStr + "5");
-
-            public readonly static ResearchNodeProto.ID FuelReductionT1_CHEAT = new ResearchNodeProto.ID(Utilities.FuelReductionStr + Utilities.Cheat_1);
-            public readonly static ResearchNodeProto.ID FuelReductionT2_CHEAT = new ResearchNodeProto.ID(Utilities.FuelReductionStr + Utilities.Cheat_2);
-            public readonly static ResearchNodeProto.ID FuelReductionT3_CHEAT = new ResearchNodeProto.ID(Utilities.FuelReductionStr + Utilities.Cheat_3);
-            public readonly static ResearchNodeProto.ID FuelReductionT4_CHEAT = new ResearchNodeProto.ID(Utilities.FuelReductionStr + Utilities.Cheat_4);
+            public readonly static ResearchNodeProto.ID CapacityIncT1_CHEAT = Ids.Research.CreateId(Utilities.CapacityIncStr + Utilities.Cheat_1);
+            public readonly static ResearchNodeProto.ID CapacityIncT2_CHEAT = Ids.Research.CreateId(Utilities.CapacityIncStr + Utilities.Cheat_2);
+            public readonly static ResearchNodeProto.ID CapacityIncT3_CHEAT = Ids.Research.CreateId(Utilities.CapacityIncStr + Utilities.Cheat_3);
+            public readonly static ResearchNodeProto.ID CapacityIncT4_CHEAT = Ids.Research.CreateId(Utilities.CapacityIncStr + Utilities.Cheat_4);
+            public readonly static ResearchNodeProto.ID CapacityIncT5_CHEAT = Ids.Research.CreateId(Utilities.CapacityIncStr + Utilities.Cheat_5);
 
 
 
-            public readonly static ResearchNodeProto.ID MaintenanceReductionT1 = new ResearchNodeProto.ID(Utilities.MaintenanceReductionStr + "2");
-            public readonly static ResearchNodeProto.ID MaintenanceReductionT2 = new ResearchNodeProto.ID(Utilities.MaintenanceReductionStr + "3");
-            public readonly static ResearchNodeProto.ID MaintenanceReductionT3 = new ResearchNodeProto.ID(Utilities.MaintenanceReductionStr + "4");
-            public readonly static ResearchNodeProto.ID MaintenanceReductionT4 = new ResearchNodeProto.ID(Utilities.MaintenanceReductionStr + "5");
+            public readonly static ResearchNodeProto.ID FuelReductionT1 = Ids.Research.CreateId(Utilities.FuelReductionStr + "2");
+            public readonly static ResearchNodeProto.ID FuelReductionT2 = Ids.Research.CreateId(Utilities.FuelReductionStr + "3");
+            public readonly static ResearchNodeProto.ID FuelReductionT3 = Ids.Research.CreateId(Utilities.FuelReductionStr + "4");
+            public readonly static ResearchNodeProto.ID FuelReductionT4 = Ids.Research.CreateId(Utilities.FuelReductionStr + "5");
 
-            public readonly static ResearchNodeProto.ID MaintenanceReductionT1_CHEAT = new ResearchNodeProto.ID(Utilities.MaintenanceReductionStr + Utilities.Cheat_1);
-            public readonly static ResearchNodeProto.ID MaintenanceReductionT2_CHEAT = new ResearchNodeProto.ID(Utilities.MaintenanceReductionStr + Utilities.Cheat_2);
-            public readonly static ResearchNodeProto.ID MaintenanceReductionT3_CHEAT = new ResearchNodeProto.ID(Utilities.MaintenanceReductionStr + Utilities.Cheat_3);
-            public readonly static ResearchNodeProto.ID MaintenanceReductionT4_CHEAT = new ResearchNodeProto.ID(Utilities.MaintenanceReductionStr + Utilities.Cheat_4);
+            public readonly static ResearchNodeProto.ID FuelReductionT1_CHEAT = Ids.Research.CreateId(Utilities.FuelReductionStr + Utilities.Cheat_1);
+            public readonly static ResearchNodeProto.ID FuelReductionT2_CHEAT = Ids.Research.CreateId(Utilities.FuelReductionStr + Utilities.Cheat_2);
+            public readonly static ResearchNodeProto.ID FuelReductionT3_CHEAT = Ids.Research.CreateId(Utilities.FuelReductionStr + Utilities.Cheat_3);
+            public readonly static ResearchNodeProto.ID FuelReductionT4_CHEAT = Ids.Research.CreateId(Utilities.FuelReductionStr + Utilities.Cheat_4);
+
+
+
+            public readonly static ResearchNodeProto.ID MaintenanceReductionT1 = Ids.Research.CreateId(Utilities.MaintenanceReductionStr + "2");
+            public readonly static ResearchNodeProto.ID MaintenanceReductionT2 = Ids.Research.CreateId(Utilities.MaintenanceReductionStr + "3");
+            public readonly static ResearchNodeProto.ID MaintenanceReductionT3 = Ids.Research.CreateId(Utilities.MaintenanceReductionStr + "4");
+            public readonly static ResearchNodeProto.ID MaintenanceReductionT4 = Ids.Research.CreateId(Utilities.MaintenanceReductionStr + "5");
+
+            public readonly static ResearchNodeProto.ID MaintenanceReductionT1_CHEAT = Ids.Research.CreateId(Utilities.MaintenanceReductionStr + Utilities.Cheat_1);
+            public readonly static ResearchNodeProto.ID MaintenanceReductionT2_CHEAT = Ids.Research.CreateId(Utilities.MaintenanceReductionStr + Utilities.Cheat_2);
+            public readonly static ResearchNodeProto.ID MaintenanceReductionT3_CHEAT = Ids.Research.CreateId(Utilities.MaintenanceReductionStr + Utilities.Cheat_3);
+            public readonly static ResearchNodeProto.ID MaintenanceReductionT4_CHEAT = Ids.Research.CreateId(Utilities.MaintenanceReductionStr + Utilities.Cheat_4);
         }
 
         public sealed class Generell

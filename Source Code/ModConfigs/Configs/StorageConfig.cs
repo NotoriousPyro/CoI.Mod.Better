@@ -5,7 +5,6 @@ namespace CoI.Mod.Better.ModConfigs.Configs
     [Serializable]
     public class StorageConfig : ConfigBase
     {
-        public bool OverrideVanilla = true;
         public bool UnlimitedTransferLimit = false;
 
         public int CapacityT1 = 540; // vanilla * 3

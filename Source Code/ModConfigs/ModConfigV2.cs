@@ -95,7 +95,6 @@ namespace CoI.Mod.Better.ModConfigs
             Config.Beacon.RewardRubberBaseValue = oldConfig.BeaconRewardRubberBaseValue;
             Config.Beacon.RewardRubberChance = oldConfig.BeaconRewardRubberChance;
 
-            Config.Storage.OverrideVanilla = oldConfig.OverrideVanillaStorages;
             Config.Storage.CapacityT1 = oldConfig.StorageCapacityT1;
             Config.Storage.TransferLimitT1Count = oldConfig.StorageTransferLimitT1Count;
             Config.Storage.TransferLimitT1Duration = oldConfig.StorageTransferLimitT1Duration;
@@ -127,7 +126,6 @@ namespace CoI.Mod.Better.ModConfigs
             Config.VehicleEdicts.ResearchCostT4 = oldConfig.VehicleEdictsResearchCostT4;
 
             Config.Tower.AreaMultiplier = oldConfig.TowerAreaMultiplier;
-            Config.Tower.OverrideVanilla = oldConfig.OverrideBaseGameTower;
 
             Config.VoidDestroy.AmountInput = oldConfig.VoidDestroyCheatAmountInput;
             Config.VoidDestroy.Duration = oldConfig.VoidDestroyCheatDuration;

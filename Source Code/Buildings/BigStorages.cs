@@ -95,14 +95,7 @@ namespace CoI.Mod.Better.Buildings
 
         private static StorageProtoBuilder.State SetCategory(StorageProtoBuilder.State creator)
         {
-            if (BetterMod.Config.Storage.OverrideVanilla)
-            {
-                creator.SetCategories(Ids.ToolbarCategories.Storages);
-            }
-            else
-            {
-                creator.SetCategories(MyIDs.ToolbarCategories.Storages);
-            }
+            creator.SetCategories(Ids.ToolbarCategories.Storages);
             return creator;
         }
     }

@@ -1,6 +1,13 @@
 # CoI.Mod.Better
 
-Game Version(Comptability): 0.4.6
+Game Version(Comptability): 0.4.12 (tested with latest experimental 26/09/22)
+
+> :warning: **This mod is a fork of the original with some stuff stripped out to make it more maintainable.** Notably, there is no longer any option to override built-in game entities, instead creating new ones & removing of the custom toolbar creation and using the built-in categories.
+
+> :warning: **This mod being a fork of the original, will not have new features and updates will be delivered WHEN and WHERE possible AND WITHOUT WARRANTY.**
+
+> :warning: **THERE IS NO GUARANTEE THIS WILL WORK FOR YOUR PRE-EXISTING SAVES**
+
 
 Savegame Comptability: You need to start a new game!
 

@@ -20,20 +20,9 @@ namespace CoI.Mod.Better.Buildings
         private void NuclearWasteStorage(ProtoRegistrator registrator)
         {
             // Set proto ids
-            StaticEntityProto.ID protoID = Ids.Buildings.NuclearWasteStorage;
-            Proto.ID category = Ids.ToolbarCategories.Storages;
+            StaticEntityProto.ID protoID = MyIDs.Buildings.NuclearWasteStorage;
+            Proto.ID category = MyIDs.ToolbarCategories.Storages;
             string iconPath = registrator.PrototypesDb.GetOrThrow<StorageProto>(Ids.Buildings.NuclearWasteStorage).Graphics.IconPath;
-
-            if (BetterMod.Config.Storage.OverrideVanilla)
-            {
-                // Remove from Database
-                registrator.PrototypesDb.RemoveOrThrow(protoID);
-            }
-            else
-            {
-                protoID = MyIDs.Buildings.NuclearWasteStorage;
-                category = MyIDs.ToolbarCategories.Storages;
-            }
 
             // Generate new proto
             CustomLayoutToken[] customTokens = new CustomLayoutToken[2]
@@ -60,7 +49,7 @@ namespace CoI.Mod.Better.Buildings
             // Add new to Database
             registrator.PrototypesDb.Add(override_storage, true);
 
-            Debug.Log("BigStorages >> NuclearWasteStorage (override:" + BetterMod.Config.Storage.OverrideVanilla + ") >> created!");
+            Debug.Log("BigStorages >> NuclearWasteStorage >> created!");
         }
     }
 }

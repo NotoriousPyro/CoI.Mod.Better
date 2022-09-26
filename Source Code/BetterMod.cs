@@ -5,7 +5,6 @@ using CoI.Mod.Better.Extensions;
 using CoI.Mod.Better.lang;
 using CoI.Mod.Better.ModConfigs;
 using CoI.Mod.Better.Research;
-using CoI.Mod.Better.Toolbars;
 using CoI.Mod.Better.Utilities;
 using Mafi;
 using Mafi.Base;
@@ -32,12 +31,15 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using UnityEngine;
+using Mafi.Collections;
 
 namespace CoI.Mod.Better
 {
 
     public sealed class BetterMod : IMod
     {
+        public void ChangeConfigs(Lyst<IConfig> configs) {}
+
         public string Name => "BetterMod";
 
         public int Version => 1;
@@ -167,7 +169,6 @@ namespace CoI.Mod.Better
 
             Debug.Log("BetterMod(V: " + MyVersion + ") RegisterPrototypes..");
             // Use data class registration to register other protos such as machines, recipes, etc.
-            registrator.RegisterData<MyToolbars>();
             registrator.RegisterData<MyVehicleCapIncrease>();
             registrator.RegisterData<MineTower>();
             registrator.RegisterData<BigStorages>();

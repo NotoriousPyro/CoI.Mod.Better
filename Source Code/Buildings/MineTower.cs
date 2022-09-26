@@ -44,13 +44,6 @@ namespace CoI.Mod.Better.Buildings
             registrator.PrototypesDb.RemoveOrThrow(protoID);
             string Name = LangManager.Instance.Get("mine_tower");
 
-            // Add override to Database
-            if (BetterMod.Config.Tower.OverrideVanilla)
-            {
-                GenerateMineTower(registrator, protoID, Name, (int)(defaultTowerRange * towerAreaMultiplier));
-                GenerateMineTower(registrator, MyIDs.Buildings.MineTowerNormal, Name+": Vanilla", defaultTowerRange);
-            }
-
             GenerateMineTower(registrator, MyIDs.Buildings.MineTowerT2, Name + " x1.5", (int)(defaultTowerRange * (towerAreaMultiplier * 1.5f)));
             GenerateMineTower(registrator, MyIDs.Buildings.MineTowerT3, Name + " x2", (int)(defaultTowerRange * (towerAreaMultiplier * 2)));
         }

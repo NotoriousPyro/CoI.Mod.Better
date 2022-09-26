@@ -23,19 +23,8 @@ namespace CoI.Mod.Better.Buildings
         private void LooseStoragesT1(ProtoRegistrator registrator)
         {            
             // Set proto ids
-            StaticEntityProto.ID protoID = Ids.Buildings.StorageLoose;
-            StaticEntityProto.ID protoNextTier = Ids.Buildings.StorageLooseT2;
-
-            if (BetterMod.Config.Storage.OverrideVanilla)
-            {
-                // Remove from Database
-                registrator.PrototypesDb.RemoveOrThrow(protoID);
-            }
-            else
-            {
-                protoID = MyIDs.Buildings.StorageLooseT1;
-                protoNextTier = MyIDs.Buildings.StorageLooseT2;
-            }
+            StaticEntityProto.ID protoID = MyIDs.Buildings.StorageLooseT1;
+            StaticEntityProto.ID protoNextTier = MyIDs.Buildings.StorageLooseT2;
 
             // Generate LocStr
             string Name = LangManager.Instance.Get("loose_storage");
@@ -52,30 +41,17 @@ namespace CoI.Mod.Better.Buildings
                 .SetPrefabPath("Assets/Base/Buildings/Storages/LooseT1.prefab")
                 .SetPileGfxParams("Pile_Soft", "Pile_Soft", new LoosePileTextureParams(1.4f));
 
-            if (!BetterMod.Config.Storage.OverrideVanilla)
-            {
-                creator.SetCustomIconPath(registrator.PrototypesDb.GetOrThrow<StorageProto>(Ids.Buildings.StorageLoose).Graphics.IconPath);
-            }
+            creator.SetCustomIconPath(registrator.PrototypesDb.GetOrThrow<StorageProto>(Ids.Buildings.StorageLoose).Graphics.IconPath);
             creator = SetCategory(creator);
             ProductUtility.SetTransferLimitByT(creator, 1).BuildAsLooseAndAdd();
 
-            Debug.Log("BetterMod(V: " + BetterMod.MyVersion + ") >> BigStorages >> LooseStoragesT1 (override:" + BetterMod.Config.Storage.OverrideVanilla + ") >> created!");
+            Debug.Log("BetterMod(V: " + BetterMod.MyVersion + ") >> BigStorages >> LooseStoragesT1 >> created!");
         }
 
         private void LooseStoragesT2(ProtoRegistrator registrator)
         {            
             // Set proto ids
-            StaticEntityProto.ID protoID = Ids.Buildings.StorageLooseT2;
-
-            if (BetterMod.Config.Storage.OverrideVanilla)
-            {
-                // Remove from Database
-                registrator.PrototypesDb.RemoveOrThrow(protoID);
-            }
-            else
-            {
-                protoID = MyIDs.Buildings.StorageLooseT2;
-            }
+            StaticEntityProto.ID protoID = MyIDs.Buildings.StorageLooseT2;
 
             // Generate LocStr
             string Name = LangManager.Instance.Get("loose_storage");
@@ -91,31 +67,17 @@ namespace CoI.Mod.Better.Buildings
                 .SetPrefabPath("Assets/Base/Buildings/Storages/LooseT2.prefab")
                 .SetPileGfxParams("Pile_Soft", "Pile_Soft", new LoosePileTextureParams(0.3f));
 
-            if (!BetterMod.Config.Storage.OverrideVanilla)
-            {
-                creator.SetCustomIconPath(registrator.PrototypesDb.GetOrThrow<StorageProto>(Ids.Buildings.StorageLooseT2).Graphics.IconPath);
-            }
+            creator.SetCustomIconPath(registrator.PrototypesDb.GetOrThrow<StorageProto>(Ids.Buildings.StorageLooseT2).Graphics.IconPath);
             creator = SetCategory(creator);
             ProductUtility.SetTransferLimitByT(creator, 2).BuildAsLooseAndAdd();
-            Debug.Log("BetterMod(V: " + BetterMod.MyVersion + ") >> BigStorages >> LooseStoragesT2 (override:" + BetterMod.Config.Storage.OverrideVanilla + ") >> created!");
+            Debug.Log("BetterMod(V: " + BetterMod.MyVersion + ") >> BigStorages >> LooseStoragesT2 >> created!");
         }
 
         private void LooseStoragesT3(ProtoRegistrator registrator)
         {
             // Set proto ids
-            StaticEntityProto.ID protoID = Ids.Buildings.StorageLooseT3;
-            StaticEntityProto.ID protoNextTier = Ids.Buildings.StorageLooseT4;
-
-            if (BetterMod.Config.Storage.OverrideVanilla)
-            {
-                // Remove from Database
-                registrator.PrototypesDb.RemoveOrThrow(protoID);
-            }
-            else
-            {
-                protoID = MyIDs.Buildings.StorageLooseT3;
-                protoNextTier = MyIDs.Buildings.StorageLooseT4;
-            }
+            StaticEntityProto.ID protoID = MyIDs.Buildings.StorageLooseT3;
+            StaticEntityProto.ID protoNextTier = MyIDs.Buildings.StorageLooseT4;
 
             // Generate LocStr
             string Name = LangManager.Instance.Get("loose_storage");
@@ -132,29 +94,16 @@ namespace CoI.Mod.Better.Buildings
                 .SetPrefabPath("Assets/Base/Buildings/Storages/LooseT3.prefab")
                 .SetPileGfxParams("Pile_Soft", "Pile_Soft", new LoosePileTextureParams(0.2f));
 
-            if (!BetterMod.Config.Storage.OverrideVanilla)
-            {
-                creator.SetCustomIconPath(registrator.PrototypesDb.GetOrThrow<StorageProto>(Ids.Buildings.StorageLooseT3).Graphics.IconPath);
-            }
+            creator.SetCustomIconPath(registrator.PrototypesDb.GetOrThrow<StorageProto>(Ids.Buildings.StorageLooseT3).Graphics.IconPath);
             creator = SetCategory(creator);
             ProductUtility.SetTransferLimitByT(creator, 3).BuildAsLooseAndAdd();
-            Debug.Log("BetterMod(V: " + BetterMod.MyVersion + ") >> BigStorages >> LooseStoragesT3 (override:" + BetterMod.Config.Storage.OverrideVanilla + ") >> created!");
+            Debug.Log("BetterMod(V: " + BetterMod.MyVersion + ") >> BigStorages >> LooseStoragesT3 >> created!");
         }
 
         private void LooseStoragesT4(ProtoRegistrator registrator)
         {            
             // Set proto ids
-            StaticEntityProto.ID protoID = Ids.Buildings.StorageLooseT4;
-
-            if (BetterMod.Config.Storage.OverrideVanilla)
-            {
-                // Remove from Database
-                registrator.PrototypesDb.RemoveOrThrow(protoID);
-            }
-            else
-            {
-                protoID = MyIDs.Buildings.StorageLooseT4;
-            }
+            StaticEntityProto.ID protoID = MyIDs.Buildings.StorageLooseT4;
 
             // Generate LocStr
             string Name = LangManager.Instance.Get("loose_storage");
@@ -179,13 +128,10 @@ namespace CoI.Mod.Better.Buildings
                 .SetPrefabPath("Assets/Base/Buildings/Storages/LooseT4.prefab")
                 .SetPileGfxParams("Pile_Soft", "Pile_Soft", new LoosePileTextureParams(0.2f));
 
-            if (!BetterMod.Config.Storage.OverrideVanilla)
-            {
-                creator.SetCustomIconPath(registrator.PrototypesDb.GetOrThrow<StorageProto>(Ids.Buildings.StorageLooseT4).Graphics.IconPath);
-            }
+            creator.SetCustomIconPath(registrator.PrototypesDb.GetOrThrow<StorageProto>(Ids.Buildings.StorageLooseT4).Graphics.IconPath);
             creator = SetCategory(creator);
             ProductUtility.SetTransferLimitByT(creator, 4).BuildAsLooseAndAdd();
-            Debug.Log("BetterMod(V: " + BetterMod.MyVersion + ") >> BigStorages >> LooseStoragesT4 (override:" + BetterMod.Config.Storage.OverrideVanilla + ") >> created!");
+            Debug.Log("BetterMod(V: " + BetterMod.MyVersion + ") >> BigStorages >> LooseStoragesT4 >> created!");
         }
 
         #endregion

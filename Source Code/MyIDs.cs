@@ -82,9 +82,9 @@ namespace CoI.Mod.Better.MyIDs
 
     public static class ToolbarCategories
     {
-        public static readonly Proto.ID Storages = new Proto.ID("Better_Mod_Storages");
-        public static readonly Proto.ID MachinesElectricity = new Proto.ID("Better_Mod_Electricity");
-        public static readonly Proto.ID MachinesMetallurgy = new Proto.ID("Better_Mod_Metallurgy");
+        public static readonly Proto.ID Storages = Ids.ToolbarCategories.Storages;
+        public static readonly Proto.ID MachinesElectricity = Ids.ToolbarCategories.MachinesElectricity;
+        public static readonly Proto.ID MachinesMetallurgy = Ids.ToolbarCategories.MachinesMetallurgy;
     }
 
     public sealed class Buildings
@@ -118,14 +118,14 @@ namespace CoI.Mod.Better.MyIDs
 
     public sealed class Machines
     {
-        public readonly static MachineProto.ID VoidCrusher = new MachineProto.ID("VoidCrusher");
-        public readonly static MachineProto.ID VoidCrusherCheat = new MachineProto.ID("VoidCrusherCheat");
-        public readonly static MachineProto.ID VoidCrusherLooseCheat = new MachineProto.ID("VoidCrusherLooseCheat");
-        public readonly static MachineProto.ID VoidCrusherFluidCheat = new MachineProto.ID("VoidCrusherFluidCheat");
-        public readonly static MachineProto.ID VoidCrusherRecyclablesCheat = new MachineProto.ID("VoidCrusherRecyclablesCheat");
-        public readonly static MachineProto.ID VoidProducerFluidCheat = new MachineProto.ID("VoidProducerLiquidCheat");
-        public readonly static MachineProto.ID VoidProducerLooseCheat = new MachineProto.ID("VoidProducerLooseCheat");
-        public readonly static MachineProto.ID VoidProducerProductCheat = new MachineProto.ID("VoidProducerProductCheat");
+        public readonly static MachineProto.ID VoidCrusher = Ids.Machines.CreateId("VoidCrusher");
+        public readonly static MachineProto.ID VoidCrusherCheat = Ids.Machines.CreateId("VoidCrusherCheat");
+        public readonly static MachineProto.ID VoidCrusherLooseCheat = Ids.Machines.CreateId("VoidCrusherLooseCheat");
+        public readonly static MachineProto.ID VoidCrusherFluidCheat = Ids.Machines.CreateId("VoidCrusherFluidCheat");
+        public readonly static MachineProto.ID VoidCrusherRecyclablesCheat = Ids.Machines.CreateId("VoidCrusherRecyclablesCheat");
+        public readonly static MachineProto.ID VoidProducerFluidCheat = Ids.Machines.CreateId("VoidProducerLiquidCheat");
+        public readonly static MachineProto.ID VoidProducerLooseCheat = Ids.Machines.CreateId("VoidProducerLooseCheat");
+        public readonly static MachineProto.ID VoidProducerProductCheat = Ids.Machines.CreateId("VoidProducerProductCheat");
 
 
         public readonly static StaticEntityProto.ID VoidDieselEnergy10Cheat = new StaticEntityProto.ID("VoidProducerEnergy10Cheat");

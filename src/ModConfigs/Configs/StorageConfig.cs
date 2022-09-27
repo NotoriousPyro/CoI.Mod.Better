@@ -28,5 +28,16 @@ namespace CoI.Mod.Better.ModConfigs.Configs
 
         public int CapacityNuclearWaste = 12000; // vanilla * 3
         public int NuclearWasteCapacityMultiplier = 2; // = Vanilla * 2
+
+        public int ResearchCostT1 = 1;
+        public int ResearchCostT2 = 4;
+        public int ResearchCostT3 = 8;
+        public int ResearchCostT4 = 16;
+        public int ResearchCostT5 = 32;
+        public int SteamResearchCostT1 = 5;
+        public int SteamResearchCostT2 = 7;
+        public int SteamResearchCostT3 = 14;
+        public int SteamResearchCostT4 = 20;
+        public int SteamResearchCostT5 = 40;
     }
 }

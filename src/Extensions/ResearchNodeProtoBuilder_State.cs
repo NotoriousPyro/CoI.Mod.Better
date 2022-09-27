@@ -22,10 +22,6 @@ namespace CoI.Mod.Better.Extensions
         {
             return state.SetCosts(new ResearchCostsTpl(ResearchCost));
         }
-        public static ResearchNodeProtoBuilder.State SetCostsWithDifficulty(this ResearchNodeProtoBuilder.State state, int ResearchCost)
-        {
-            return state.SetCosts(new ResearchCostsTpl(ResearchNodeProto.DifficultyToSteps(ResearchCost)));
-        }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ResearchNodeProtoBuilder.State SetCostsOne(this ResearchNodeProtoBuilder.State state)
@@ -49,28 +45,6 @@ namespace CoI.Mod.Better.Extensions
             }
             return builderState;
         }
-
-        public static ResearchNodeProtoBuilder.State AddParent(this ResearchNodeProtoBuilder.State builderState, params ResearchNodeProto.ID[] protoIDs)
-        {
-            foreach (Proto.ID protoId in protoIDs)
-            {
-                return builderState.AddParents(builderState.Builder.ProtosDb.GetOrThrow<ResearchNodeProto>(protoId));
-            }
-            return builderState;
-        }
-
-        public static ResearchNodeProtoBuilder.State AddLayoutEntityToUnlock(this ResearchNodeProtoBuilder.State builderState, params StaticEntityProto.ID[] protoIDs)
-        {
-            foreach (Proto.ID protoId in protoIDs)
-            {
-                LayoutEntityProto orThrow = builderState.Builder.ProtosDb.GetOrThrow<LayoutEntityProto>(protoId);
-
-                builderState.AddIcon(orThrow, orThrow.Graphics.IconPath);
-                builderState.AddUnit(new LayoutEntityUnlock(orThrow, false));
-            }
-            return builderState;
-        }
-
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ResearchNodeProto AddParentPlusGridPos(this ResearchNodeProto builder, ResearchNodeProto parentProto, int ui_stepSize_x = BetterMod.UIStepSize, int ui_stepSize_y = 0)

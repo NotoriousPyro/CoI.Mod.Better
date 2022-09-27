@@ -13,7 +13,6 @@ namespace CoI.Mod.Better.Custom.Data
     [Serializable]
     public class ToolbarData
     {
-        public bool overrideProtoID;
         public string ProtoID;
 
         public string Name;
@@ -49,45 +48,23 @@ namespace CoI.Mod.Better.Custom.Data
 
             Proto.ID protoID = new Proto.ID(ProtoID);
             Option<ToolbarCategoryProto> overrideProto = registrator.PrototypesDb.Get<ToolbarCategoryProto>(protoID);
-            if (!overrideProtoID && overrideProto.HasValue)
+            if (overrideProto.HasValue)
             {
                 Debug.Log("TooblarData >> Into >> name: " + Name + " | id: " + protoID + " >> Toolbar cannot generate, ProtoID already exists!");
                 return Option<ToolbarCategoryProto>.None;
             }
-            else if (overrideProtoID && !overrideProto.HasValue)
-            {
-                Debug.Log("TooblarData >> Into >> name: " + Name + " | id: " + protoID + " >> Toolbar cannot override, ProtoID is not exists!");
-                return Option<ToolbarCategoryProto>.None;
-            }
 
-            if (overrideProtoID)
-            {
-                OverrideData(overrideProto);
-            }
-            else
-            {
-                Name.CheckNotNullOrEmpty();
-                IconPath.CheckNotNullOrEmpty();
-                Order.CheckNotNegative();
-            }
-
+            Name.CheckNotNullOrEmpty();
+            IconPath.CheckNotNullOrEmpty();
+            Order.CheckNotNegative();
 
             if (ShortcutID == null)
             {
                 ShortcutID = "";
             }
 
-            //Loc.Str(id.Value + "__name", name, "name" + translationComment), (descShort != null) ? Loc.Str(id.Value + "__desc", descShort, "short description" + translationComment) : LocStr.Empty
-
             Proto.Str strings;
-            if (overrideProtoID)
-            {
-                strings = new Proto.Str(LocalizationManager.LoadOrCreateLocalizedString0(Name, Name), LocStr.Empty);
-            }
-            else
-            {
-                strings = new Proto.Str(Loc.Str(protoID.ToString() + "__name", protoID.ToString(), ""), LocStr.Empty);
-            }
+            strings = new Proto.Str(Loc.Str(protoID.ToString() + "__name", protoID.ToString(), ""), LocStr.Empty);
             return Option<ToolbarCategoryProto>.Some(new ToolbarCategoryProto(
                         protoID,
                         strings,
@@ -98,46 +75,6 @@ namespace CoI.Mod.Better.Custom.Data
                     ));
         }
 
-        private void OverrideData(Option<ToolbarCategoryProto> overrideProto)
-        {
-            ToolbarData overrideData = new ToolbarData();
-            overrideData.From(overrideProto.Value);
-
-            if (Name == null || Name.IsEmpty())
-            {
-                Name = overrideData.Name;
-            }
-            else
-            {
-                Name.CheckNotNullOrEmpty();
-            }
-
-            if (IconPath == null || IconPath.IsEmpty())
-            {
-                IconPath = overrideData.IconPath;
-            }
-            else
-            {
-                IconPath.CheckNotNullOrEmpty();
-            }
-
-            if (Order == default)
-            {
-                Order = overrideData.Order;
-            }
-            else
-            {
-                Order.CheckNotNegative();
-            }
-
-            if ((ShortcutID == null || ShortcutID.IsEmpty()) && overrideData.ShortcutID != null && !overrideData.ShortcutID.IsEmpty())
-            {
-                ShortcutID = overrideData.ShortcutID;
-            }
-
-            isTransportBuildAllowed = overrideData.isTransportBuildAllowed;
-        }
-
         public void Build(ProtoRegistrator registrator)
         {
             Option<ToolbarCategoryProto> intoData = Into(registrator);
@@ -146,10 +83,6 @@ namespace CoI.Mod.Better.Custom.Data
                 return;
             }
 
-            if (overrideProtoID)
-            {
-                registrator.PrototypesDb.RemoveOrThrow(new Proto.ID(ProtoID));
-            }
             registrator.PrototypesDb.Add(intoData.Value);
         }
     }

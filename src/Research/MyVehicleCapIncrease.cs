@@ -30,7 +30,7 @@ namespace CoI.Mod.Better.Research
 
             
 
-            master_research.GridPosition += new Vector2i(0, -2);
+            master_research.GridPosition += new Vector2i(0, -16);
 
             if (!BetterMod.Config.Systems.VehicleCapIncrease)
             {

@@ -26,7 +26,7 @@ namespace CoI.Mod.Better.Buildings
             ResearchNodeProto parentResearch = registrator.PrototypesDb.GetOrThrow<ResearchNodeProto>(MyIDs.Research.VehicleCapIncreaseID_ZERO);
             ResearchNodeProto t1Storage = registrator.PrototypesDb.GetOrThrow<ResearchNodeProto>(Ids.Research.StoragesT1);
             ResearchNodeProto t2Storage = registrator.PrototypesDb.GetOrThrow<ResearchNodeProto>(Ids.Research.Storage2);
-            ResearchNodeProto t3Storage = registrator.PrototypesDb.GetOrThrow<ResearchNodeProto>(Ids.Research.Storage4);
+            ResearchNodeProto t3Storage = registrator.PrototypesDb.GetOrThrow<ResearchNodeProto>(Ids.Research.Storage3);
             ResearchNodeProto t4Storage = registrator.PrototypesDb.GetOrThrow<ResearchNodeProto>(Ids.Research.Storage4);
 
             var researchT1 = registrator.ResearchNodeProtoBuilder

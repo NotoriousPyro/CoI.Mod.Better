@@ -54,17 +54,14 @@ namespace CoI.Mod.Better
         public static readonly string CustomsDirPath = Path.Combine(ModDirPath, "Customs");
         public static readonly string LangDirPath = Path.Combine(ModDirPath, "Lang");
 
-        public const int OldConfigVersion = 4;
-        public const int CurrentConfigVersion = 5;
-
         public const int UIStepSize = 4;
-        public const string MyVersion = "0.1.9.1";
+        public static readonly string MyVersion = typeof(BetterMod).Assembly.GetName().Version.ToString();
 
 
         public const string JsonExt = ".json";
 
         public static readonly GameVersion CurrentGameVersion = new GameVersion();
-        public static readonly GameVersion CompatibilityVersion = new GameVersion("Early Access", "0", "4", "8", "");
+        public static readonly GameVersion CompatibilityVersion = new GameVersion("Early Access", "0", "4", "12", "");
         public static bool IsCompatibility => CurrentGameVersion.Equals(CompatibilityVersion, true);
 
         public BetterMod()
@@ -195,38 +192,32 @@ namespace CoI.Mod.Better
         {
             JsonSerializerSettings settings = new JsonSerializerSettings() { Formatting = Formatting.Indented, MaxDepth = 500, MissingMemberHandling = MissingMemberHandling.Ignore, NullValueHandling = NullValueHandling.Ignore, ReferenceLoopHandling = ReferenceLoopHandling.Serialize };
 
-            string oldConfigFile = ModDirPath + "/globalconfig" + OldConfigVersion + ".json";
-            string newConfigFile = ModDirPath + "/globalconfig" + CurrentConfigVersion + ".json";
+            string v4ConfigFile = ModDirPath + "/globalconfig4.json";
+            string v5ConfigFile = ModDirPath + "/globalconfig5.json";
+            var hasConfigV4 = File.Exists(v4ConfigFile);
+            var hasConfigV5 = File.Exists(v5ConfigFile);
 
-            if (File.Exists(oldConfigFile) && !File.Exists(newConfigFile))
+            if (hasConfigV5)
             {
-                if (OldConfigVersion == 4)
-                {
-                    Debug.Log("BetterMod(V: " + MyVersion + ") Config converting..");
-
-                    Config = new ModConfigV2();
-                    ModConfig oldConfig = new ModConfig();
-
-                    string content = File.ReadAllText(oldConfigFile);
-                    JsonUtility.FromJsonOverwrite(content, oldConfig);
-
-                    File.Delete(oldConfigFile);
-                    Config = ModConfigV2.ConvertConfig_4_to_5(oldConfig);
-                    Debug.Log("BetterMod(V: " + MyVersion + ") Config converted.");
-                }
-                else
-                {
-                    string content = File.ReadAllText(newConfigFile, Encoding.UTF8);
-                    Config = JsonConvert.DeserializeObject<ModConfigV2>(content, settings);
-                }
-            }
-            else if (File.Exists(newConfigFile))
-            {
-                string content = File.ReadAllText(newConfigFile, Encoding.UTF8);
+                string content = File.ReadAllText(v5ConfigFile, Encoding.UTF8);
                 Config = JsonConvert.DeserializeObject<ModConfigV2>(content, settings);
             }
+            if (hasConfigV4 && !hasConfigV5)
+            {
+                Debug.Log("BetterMod(V: " + MyVersion + ") Config converting..");
 
-            File.WriteAllText(newConfigFile, JsonConvert.SerializeObject(Config, settings));
+                Config = new ModConfigV2();
+                ModConfig oldConfig = new ModConfig();
+
+                string content = File.ReadAllText(v4ConfigFile);
+                JsonUtility.FromJsonOverwrite(content, oldConfig);
+
+                File.Delete(v4ConfigFile);
+                Config = ModConfigV2.ConvertConfig_4_to_5(oldConfig);
+                Debug.Log("BetterMod(V: " + MyVersion + ") Config converted.");
+            }
+
+            File.WriteAllText(v5ConfigFile, JsonConvert.SerializeObject(Config, settings));
             Config.Print();
         }
 

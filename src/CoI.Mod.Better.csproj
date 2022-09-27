@@ -1,11 +1,41 @@
 <Project Sdk="Microsoft.NET.Sdk">
+  <Import Project="PreBuild.target" />
+  <Target Name="ZipOutputPath" AfterTargets="Build" Condition=" '$(Configuration)' == 'Release' ">
+    <PropertyGroup>
+      <DistDir>$(MSBuildProjectDirectory)\..\release</DistDir>
+      <Release>$(DistDir)\$(MSBuildProjectName)-$(Configuration)-v$(Version)</Release>
+      <ModBaseDir>$(Release)\Mods\$(MSBuildProjectName)</ModBaseDir>
+    </PropertyGroup>
+    <ItemGroup>
+      <SourceFiles Include="$(OutDir)\*.*" />
+      <Documentation Include="$(MSBuildProjectDirectory)\..\CHANGELOG" />
+      <Documentation Include="$(MSBuildProjectDirectory)\..\LICENSE" />
+      <Documentation Include="$(MSBuildProjectDirectory)\..\README.md" />
+      <Plugins Include="$(MSBuildProjectDirectory)\..\Plugins\*" />
+      <Language Include="$(MSBuildProjectDirectory)\Lang\**\*.json" />
+      <!-- <DocumentationFolder Include="$(MSBuildProjectDirectory)\docs\*" /> -->
+    </ItemGroup>
+    <MakeDir Directories="$(ModBaseDir)" ContinueOnError="false" />
+    <Copy SourceFiles="@(SourceFiles)" DestinationFolder="$(ModBaseDir)" ContinueOnError="false" />
+    <Copy SourceFiles="@(Plugins)" DestinationFolder="$(ModBaseDir)" ContinueOnError="false" />
+    <Copy SourceFiles="@(Language)" DestinationFiles="@(Language->'$(ModBaseDir)\Lang\%(RecursiveDir)%(Filename)%(Extension)')" ContinueOnError="false" />
+    <Copy SourceFiles="@(Documentation)" DestinationFolder="$(Release)" ContinueOnError="false" />
+    <!-- <Copy SourceFiles="@(DocumentationFolder)" DestinationFolder="$(Release)\docs" ContinueOnError="false" /> -->
+    <ZipDirectory SourceDirectory="$(Release)" DestinationFile="$(Release).zip" ContinueOnError="false" />
+  </Target>
   <PropertyGroup>
     <OutputType>Library</OutputType>
     <TargetFramework>net48</TargetFramework>
     <Configurations>Debug;Release</Configurations>
-    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
-    <Authors>Luxgor | K. Wehmeyer</Authors>
+    <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
+    <Authors>NotoriousPyro</Authors>
     <LangVersion>10.0</LangVersion>
+    <Version>0.2.2</Version>
+    <Title>CoI.Mod.Better</Title>
+    <Description>CoI.Mod.Better</Description>
+    <Company>NotoriousPyro</Company>
+    <Product>NotoriousPyro.CoI.Mod.Better</Product>
+    <Copyright>Copyright © NotoriousPyro</Copyright>
   </PropertyGroup>
   
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">

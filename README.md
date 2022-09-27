@@ -1,12 +1,14 @@
 # CoI.Mod.Better
 
-Game Version(Comptability): 0.4.12 (tested with latest experimental 26/09/22)
+Game Version(Comptability): 0.4.12
 
 > :warning: **This mod is a fork of the original with some stuff stripped out to make it more maintainable.** Notably, there is no longer any option to override built-in game entities, instead creating new ones & removing of the custom toolbar creation and using the built-in categories.
 
 > :warning: **This mod being a fork of the original, will not have new features and updates will be delivered WHEN and WHERE possible AND WITHOUT WARRANTY.**
 
 > :warning: **THERE IS NO GUARANTEE THIS WILL WORK FOR YOUR PRE-EXISTING SAVES**
+
+> :warning: **You need to remove any DLLs copied to the CoI base folder from previous releases of CoI.Mod.Better, the required DLLs are already included alongside the main DLL and can be copied to the same mod folder of Coi.Mod.Better.**
 
 
 Savegame Comptability: You need to start a new game!
@@ -56,18 +58,24 @@ Edicts:
 - Recycling Ratio: 20%, 40%, 60%, 80%, 100%
 - Solar power: 25%, 50%, 100%, 200%, 300%
 
-# Install
-Download this file: https://github.com/Wehmeyer100/CoI.Mod.Better/releases/tag/0.1.9
+# How to install
 
-1. Open your documents folder. Here you should find the "Captain Of Industry" folder. 
+> :warning: **You will need to start a new game to play this mod. This is a restriction of CoI.**
 
-2. Is the "Mods" folder present? If not, just create a new one with the name "Mods".
+Download the latest release: https://github.com/NotoriousPyro/CoI.Mod.Better/releases
 
-3. Copy the folder "CoI.Mod.Better" and paste it into the "Documents\CaptainOfIndustry\Mods" folder. The folder name must be exact "CoI.Mod.Better"!
+1. From the downloaded zip, copy the contents of the `Mods` folder to your Captain of Industry `Mods` folder.
+
+    By default, this is `Documents\Captain of Industry\Mods`. You can find out where exactly by running the following in PowerShell:
+    ```powershell
+    ((new-object -COM Shell.Application).Namespace(0x05).Self.Path + '\Captain of Industry\Mods')
+    ```
+
+2. Verify inside 'Mods' folder, each sub-folder has **a dll file with the same name as the folder**, it is fine if other DLLs are also present.
+
+3. Enable the `Enable mods` options in the ingame settings.
 
 4. Start a new game!
-
-Then start the game and enjoy!
 
 # FAQ
 

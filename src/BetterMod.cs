@@ -50,48 +50,17 @@ namespace CoI.Mod.Better
 
         public static readonly string ModRootDirPath = new FileSystemHelper().GetDirPath(FileType.Mod, false);
         public static readonly string ModDirPath = Path.Combine(ModRootDirPath, "CoI.Mod.Better");
-        public static readonly string PluginDirPath = Path.Combine(ModDirPath, "Plugins");
         public static readonly string CustomsDirPath = Path.Combine(ModDirPath, "Customs");
         public static readonly string LangDirPath = Path.Combine(ModDirPath, "Lang");
 
         public const int UIStepSize = 4;
         public static readonly string MyVersion = typeof(BetterMod).Assembly.GetName().Version.ToString();
 
+        static readonly GameVersion CurrentGameVersion = new GameVersion();
+        static readonly GameVersion TargetGameVersion = new GameVersion("Early Access", "0", "4", "12", "");
+        static bool isTargetedGameVersion => CurrentGameVersion.Equals(TargetGameVersion, true);
 
-        public const string JsonExt = ".json";
-
-        public static readonly GameVersion CurrentGameVersion = new GameVersion();
-        public static readonly GameVersion CompatibilityVersion = new GameVersion("Early Access", "0", "4", "12", "");
-        public static bool IsCompatibility => CurrentGameVersion.Equals(CompatibilityVersion, true);
-
-        public BetterMod()
-        {
-            AppDomain.CurrentDomain.AssemblyResolve += CurrentDomain_AssemblyResolve;
-        }
-
-        private Assembly CurrentDomain_AssemblyResolve(object sender, ResolveEventArgs args)
-        {
-            string assemblyPath = Path.Combine(PluginDirPath, new AssemblyName(args.Name).Name + ".dll");
-            if (!File.Exists(assemblyPath))
-            {
-                Debug.Log("BetterMod(V: " + MyVersion + ") Assembly cannot loaded from Plugins, Assembly not found >> " + assemblyPath);
-                return null;
-            }
-
-            try
-            {
-                Assembly assembly = Assembly.LoadFrom(assemblyPath);
-                Debug.Log("BetterMod(V: " + MyVersion + ") Assembly loaded from Plugins >> " + assembly.FullName + " >> " + assemblyPath);
-                return assembly;
-            }
-            catch (Exception e)
-            {
-                Debug.Log("BetterMod(V: " + MyVersion + ") Assembly cannot loaded from Plugins, by exception >> " + assemblyPath);
-                Debug.LogException(e);
-            }
-            return null;
-        }
-
+        public BetterMod() {}
 
         public void Initialize(DependencyResolver resolver, bool gameWasLoaded)
         {
@@ -137,14 +106,14 @@ namespace CoI.Mod.Better
 
         public void RegisterPrototypes(ProtoRegistrator registrator)
         {
-            if (!IsCompatibility)
+            if (!isTargetedGameVersion)
             {
                 Debug.LogWarning("###############################################################");
                 Debug.LogWarning("####################### WARNING ###############################");
                 Debug.LogWarning("###############################################################");
                 Debug.LogWarning("BetterMod(V: " + MyVersion + ") >> This mod is not compatible with the current game version and can cause problems!!!");
                 Debug.LogWarning("BetterMod(V: " + MyVersion + ") >> CurrentGameVersion: " + CurrentGameVersion.ToString());
-                Debug.LogWarning("BetterMod(V: " + MyVersion + ") >> CompatibilityVersion: " + CompatibilityVersion.ToString());
+                Debug.LogWarning("BetterMod(V: " + MyVersion + ") >> TargetGameVersion: " + TargetGameVersion.ToString());
                 Debug.LogWarning("BetterMod(V: " + MyVersion + ") >> Check for updates: https://github.com/Wehmeyer100/CoI.Mod.Better/releases");
                 Debug.LogWarning("###############################################################");
             }
@@ -152,7 +121,6 @@ namespace CoI.Mod.Better
             Debug.Log("BetterMod(V: " + MyVersion + ") Directories ..");
             Debug.Log(" - MOD_ROOT_DIR_PATH: " + ModRootDirPath);
             Debug.Log(" - MOD_DIR_PATH: " + ModDirPath);
-            Debug.Log(" - PLUGIN_DIR_PATH: " + PluginDirPath);
             Debug.Log(" - CUSTOMS_DIR_PATH: " + CustomsDirPath);
             Debug.Log(" - LANG_DIR_PATH: " + LangDirPath);
 

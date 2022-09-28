@@ -62,10 +62,14 @@ namespace CoI.Mod.Better.lang
 
         public void Load()
         {
-            List<string> foundedFiles = new List<string>();
-            LoadData(CurrentLang, ref foundedFiles);
+            string dir_path = Path.Combine(BetterMod.LangDirPath, CurrentLang);
+            if (!Directory.Exists(dir_path))
+            {
+                throw new Exception($"Language does not exist: {CurrentLang}!");
+            }
+            var foundFiles = Directory.GetFiles(dir_path, "*.json", SearchOption.AllDirectories);
 
-            foreach (string file_path in foundedFiles)
+            foreach (string file_path in foundFiles)
             {
                 try
                 {
@@ -88,34 +92,6 @@ namespace CoI.Mod.Better.lang
                 catch (Exception e)
                 {
                     Debug.LogWarning("BetterMod(V: " + BetterMod.MyVersion + ") >> LangManager >> Loading file(file: " + file_path + ") >> Lang cannot reading! >> " + e.ToString());
-                }
-            }
-        }
-
-        private void LoadData(string directory, ref List<string> foundedFiles, bool recusive = true)
-        {
-            string dir_path = Path.Combine(BetterMod.LangDirPath, directory);
-
-            if (!Directory.Exists(dir_path))
-            {
-                return;
-            }
-
-            if (recusive)
-            {
-                foreach (string dir in Directory.GetDirectories(dir_path))
-                {
-                    LoadData(dir.Replace(dir_path + (dir_path.EndsWith("/") ? "" : "/"), ""), ref foundedFiles, recusive);
-                }
-            }
-
-            string[] allFiles = Directory.GetFiles(dir_path);
-            foreach (string file_path in allFiles)
-            {
-                string ext = Path.GetExtension(file_path);
-                if (ext == BetterMod.JsonExt)
-                {
-                    foundedFiles.Add(file_path);
                 }
             }
         }

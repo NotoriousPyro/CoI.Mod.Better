@@ -13,7 +13,6 @@ namespace CoI.Mod.Better.ModConfigs.Configs
 
         public int BattleRoundsToEscape = 25;
 
-        public bool DisableFuelConsumption = false;
         public int FreeElectricity = 0;
     }
 }

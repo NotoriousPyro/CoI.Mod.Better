@@ -10,8 +10,6 @@
 > :warning: **You need to remove any DLLs copied to the CoI base folder from previous releases of CoI.Mod.Better, the required DLLs are already included alongside the main DLL and can be copied to the same mod folder of Coi.Mod.Better.**
 
 
-Savegame Comptability: You need to start a new game!
-
 # Current overview of the functions:
 - Void Destroyer - Shreds products(no liquids, no losse), has as output stones. and causes emissions.
 - All vanilla storages have 3x more space. 
@@ -59,8 +57,6 @@ Edicts:
 
 # How to install
 
-> :warning: **You will need to start a new game to play this mod. This is a restriction of CoI.**
-
 Download the latest release: https://github.com/NotoriousPyro/CoI.Mod.Better/releases
 
 1. From the downloaded zip, copy the contents of the `Mods` folder to your Captain of Industry `Mods` folder.
@@ -72,14 +68,12 @@ Download the latest release: https://github.com/NotoriousPyro/CoI.Mod.Better/rel
 
 2. Verify inside 'Mods' folder, each sub-folder has **a dll file with the same name as the folder**, it is fine if other DLLs are also present.
 
-3. Enable the `Enable mods` options in the ingame settings.
-
-4. Start a new game!
+3. Enable the `Enable mods` options in the ingame settings or select the mod in load game menu.
 
 # FAQ
 
 1. May I rename the folder or file ? 
-    No, CoI would otherwise have problems and find the mod.
+    Best not to, but you can try loading it without the mod enabled first... Likely to cause things to disappear in the game...
 
 2. Why is the mod not loaded?
     There are several reasons.

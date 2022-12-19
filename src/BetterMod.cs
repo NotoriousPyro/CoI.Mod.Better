@@ -97,10 +97,6 @@ namespace CoI.Mod.Better
                     coreConfig.BaseRoundsToEscape = Config.GameSettings.BattleRoundsToEscape;
                     coreConfig.FreeElectricityPerTick = Config.GameSettings.FreeElectricity.Kw();
                 }
-                if (resolver.TryGetResolvedDependency(out BaseModConfig baseConfig))
-                {
-                    baseConfig.DisableFuelConsumption = Config.GameSettings.DisableFuelConsumption;
-                }
             }
         }
 

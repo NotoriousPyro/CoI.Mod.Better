@@ -1,6 +1,5 @@
 # CoI.Mod.Better
-
-Game Version(Comptability): 0.4.12
+## Version 0.2.4 (compatible CoI version: 0.4.12 - 0.4.13)
 
 > :warning: **This mod is a fork of the original with some stuff stripped out to make it more maintainable.** Notably, there is no longer any option to override built-in game entities, instead creating new ones & removing of the custom toolbar creation and using the built-in categories.
 
